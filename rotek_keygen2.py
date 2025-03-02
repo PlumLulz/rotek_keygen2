@@ -17,8 +17,6 @@ def rotek_keygen2(seed1, seed2, seed3):
 
 	pos = 18
 	pwd = ["" for i in range(18)]
-	test = []
-	test2 = []
 	while pos > 0:
 		seed1 = 171*seed1 % int('763d', 16)
 		seed2 = 172*seed2 % int('7663', 16)
@@ -53,4 +51,3 @@ parser.add_argument('seed3', help='Seed3', type=int)
 args = parser.parse_args()
 
 rotek_keygen2(args.seed1, args.seed2, args.seed3)
-
